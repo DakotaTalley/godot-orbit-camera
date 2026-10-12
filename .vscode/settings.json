@@ -1,4 +1,4 @@
 {
-  "dotnet.defaultSolution": "Orbit Camera POC.sln",
+  "dotnet.defaultSolution": "OrbitCameraDemo.sln",
   "godotTools.editorPath.godot4": "/usr/bin/godot-mono"
 }
