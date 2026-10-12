@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b2obtoce0n1gk"]
+
+[ext_resource type="Script" uid="uid://dbf5wjp3pajhc" path="res://addons/orbit_camera/PivotCam.cs" id="1_54t5v"]
+
+[node name="PivotCam" type="Node3D" unique_id=621643019 node_paths=PackedStringArray("Arm", "Camera")]
+script = ExtResource("1_54t5v")
+Arm = NodePath("Arm")
+Camera = NodePath("Arm/Camera3D")
+
+[node name="Arm" type="Node3D" parent="." unique_id=220936679]
+
+[node name="Camera3D" type="Camera3D" parent="Arm" unique_id=1526068669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)

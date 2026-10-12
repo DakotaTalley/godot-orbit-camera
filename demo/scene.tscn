@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://c6p3b7khfgpki"]
+
+[ext_resource type="PackedScene" uid="uid://b2obtoce0n1gk" path="res://addons/orbit_camera/pivot_cam.tscn" id="1_76mfg"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_plaax"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_plaax"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_plaax"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ulcgi"]
+
+[sub_resource type="Sky" id="Sky_drvgu"]
+sky_material = SubResource("ProceduralSkyMaterial_ulcgi")
+
+[sub_resource type="Environment" id="Environment_plaax"]
+background_mode = 2
+sky = SubResource("Sky_drvgu")
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_4emto"]
+
+[sub_resource type="Compositor" id="Compositor_0id0p"]
+
+[node name="Node" type="Node" unique_id=676534728]
+
+[node name="PivotCam" parent="." unique_id=621643019 instance=ExtResource("1_76mfg")]
+
+[node name="Ground" type="MeshInstance3D" parent="." unique_id=947772778]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_plaax")
+
+[node name="Objects" type="Node3D" parent="." unique_id=1355872833]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Objects" unique_id=393291890]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 4.9658966, 1.5204968, 4.587596)
+mesh = SubResource("BoxMesh_plaax")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Objects" unique_id=202680176]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 4.9658966, 0.52049685, 1.6862383)
+mesh = SubResource("BoxMesh_plaax")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Objects" unique_id=362497470]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 4.9658966, 1.5204968, -6.2314224)
+mesh = SubResource("BoxMesh_plaax")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Objects" unique_id=329912997]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -6.206527, 1, 5.0676007)
+mesh = SubResource("PrismMesh_plaax")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=366382759]
+environment = SubResource("Environment_plaax")
+camera_attributes = SubResource("CameraAttributesPractical_4emto")
+compositor = SubResource("Compositor_0id0p")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1199203209]
+transform = Transform3D(-0.70710677, 0.68301266, -0.18301272, 0, 0.25881907, 0.9659258, 0.70710677, 0.68301266, -0.18301272, 0, -5, 0)
+light_color = Color(0.89411765, 0.89411765, 0.8666667, 1)
+shadow_enabled = true

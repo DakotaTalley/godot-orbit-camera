@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orbit Camera POC", "Orbit Camera POC.csproj", "{3BF259E4-66D4-4ACC-A076-FB05D058D400}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{3BF259E4-66D4-4ACC-A076-FB05D058D400}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal
