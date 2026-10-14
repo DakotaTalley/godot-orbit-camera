@@ -40,7 +40,7 @@ public partial class PivotCam : Node3D
 	[ExportGroup("References")]
 	[Export] public Node3D Arm;
 	[Export] public Camera3D Camera;
-	[Export] public Node3D BoundingBox;
+	[Export] public CollisionShape3D BoundingBox;
 
 	private CameraState _startState;
 	
@@ -173,6 +173,14 @@ public partial class PivotCam : Node3D
 
 	private void SetPivotPosition(Vector3 position)
 	{
-		Position = position;
+		if (BoundingBox?.Shape is not BoxShape3D boxShape)
+		{
+			Position = position;
+			return;
+		}
+
+		Vector3 boundingMin = BoundingBox.Position - boxShape.Size / 2;
+		Vector3 boundingMax = BoundingBox.Position + boxShape.Size / 2;
+		Position = position.Clamp(boundingMin, boundingMax);
 	}
 }

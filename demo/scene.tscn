@@ -2,6 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://b2obtoce0n1gk" path="res://addons/orbit_camera/pivot_cam.tscn" id="1_76mfg"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_plaax"]
+size = Vector3(25, 25, 25)
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_plaax"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_plaax"]
@@ -23,7 +26,11 @@ sky = SubResource("Sky_drvgu")
 
 [node name="Node" type="Node" unique_id=676534728]
 
-[node name="PivotCam" parent="." unique_id=621643019 instance=ExtResource("1_76mfg")]
+[node name="PivotCam" parent="." unique_id=621643019 node_paths=PackedStringArray("BoundingBox") instance=ExtResource("1_76mfg")]
+BoundingBox = NodePath("../CollisionShape3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1985147359]
+shape = SubResource("BoxShape3D_plaax")
 
 [node name="Ground" type="MeshInstance3D" parent="." unique_id=947772778]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
